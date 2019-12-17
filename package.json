@@ -5,9 +5,9 @@
 	"version": "0.0.1",
 	"publisher": "Addison Elliott",
 	"repository": {
-        "type": "git",
-        "url": "https://github.com/addisonElliott/align-by-token.git"
-    },
+		"type": "git",
+		"url": "https://github.com/addisonElliott/align-by-token.git"
+	},
 	"engines": {
 		"vscode": "^1.41.0"
 	},
@@ -17,7 +17,6 @@
 	"activationEvents": [
 		"onCommand:extension.alignByToken"
 	],
-
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
@@ -30,7 +29,7 @@
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
+		"watch": "tsc -watch -p ./"
 	},
 	"devDependencies": {
 		"@types/glob": "^7.1.1",
@@ -39,8 +38,10 @@
 		"@types/vscode": "^1.41.0",
 		"glob": "^7.1.5",
 		"mocha": "^6.2.2",
-		"typescript": "^3.6.4",
+		"prettier": "^1.19.1",
 		"tslint": "^5.20.0",
+		"tslint-plugin-prettier": "^2.0.1",
+		"typescript": "^3.6.4",
 		"vscode-test": "^1.2.2"
 	}
 }

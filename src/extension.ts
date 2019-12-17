@@ -3,7 +3,6 @@ import * as vscode from 'vscode';
 
 async function alignByToken(editor: vscode.TextEditor, edit: vscode.TextEditorEdit) {
 	// TODO Fix formatting
-	// TODO Upload to GitHub
 
 	// Grab current selection or return if nothing is selected
 	const text = editor.document.getText(editor.selection);
@@ -11,14 +10,18 @@ async function alignByToken(editor: vscode.TextEditor, edit: vscode.TextEditorEd
 		return;
 	}
 
+	// testing testing testing testing testing testing testing testing testing testing testing testing testing testing testing testing testing testing testing testing testing testing testing testing
+
 	const token = await vscode.window.showInputBox({
-        placeHolder: "Enter token to align by"
+		placeHolder: 'Enter token to align by'
 	});
 	if (!token) {
 		return;
 	}
 
-	const spaceType = await vscode.window.showQuickPick(['Tabs', 'Spaces'], { placeHolder: 'Select spacing type' });
+	const spaceType = await vscode.window.showQuickPick(['Tabs', 'Spaces'], {
+		placeHolder: 'Select spacing type'
+	});
 	if (!spaceType) {
 		return;
 	}
@@ -31,7 +34,7 @@ async function alignByToken(editor: vscode.TextEditor, edit: vscode.TextEditorEd
 }
 
 export function activate(context: vscode.ExtensionContext) {
-	let disposable = vscode.commands.registerTextEditorCommand('extension.alignByToken', alignByToken);
+	const disposable = vscode.commands.registerTextEditorCommand('extension.alignByToken', alignByToken);
 	context.subscriptions.push(disposable);
 }
 
